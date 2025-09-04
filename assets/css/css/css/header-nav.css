@@ -1,0 +1,244 @@
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  color: #444444;
+  padding: 15px 0;
+  transition: all 0.5s;
+  z-index: 100000 !important;
+}
+
+.header.scrolled {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  z-index: 999 !important;
+}
+
+.header .logo {
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.header .logo img {
+  max-height: 32px;
+  margin-right: 6px;
+}
+
+.header .logo h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a1f24;
+  margin: 0;
+}
+
+.header .logo span {
+  color: #FF5722;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.header .btn-getstarted {
+  background: linear-gradient(45deg, #FF5722, #FFC107);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  font-size: 13px;
+  padding: 6px 20px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 87, 34, 0.4);
+  animation: glassPulse 2s infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes glassPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 87, 34, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.6);
+  }
+}
+
+.header .btn-getstarted:hover {
+  background: linear-gradient(45deg, #e54c1e, #FF8A65);
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 87, 34, 0.6);
+  animation: none;
+}
+
+.header .btn-getstarted:active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 193, 7, 0.4), transparent);
+  border-radius: 4px;
+  animation: sparkRipple 0.6s ease-out;
+}
+
+@keyframes sparkRipple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.navmenu ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navmenu li {
+  margin: 0 15px;
+}
+
+.navmenu a {
+  color: #444444;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navmenu a:hover {
+  color: #FF5722;
+}
+
+.mobile-nav-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #FF5722;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 1199.98px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 1199px) {
+  .navmenu ul {
+    display: none;
+    list-style: none;
+    position: absolute;
+    inset: 60px 20px 20px 20px;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 6px;
+    background-color: var(--nav-mobile-background-color);
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 9998;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 1199px) {
+  body.mobile-nav-active .navmenu > ul {
+    display: block !important;
+  }
+}
+
+/* This is the corrected rule */
+
+@media (max-width: 1199px) {
+  .mobile-nav-active .navmenu > ul {
+    display: block !important;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .navmenu.mobile-nav-active ul {
+    display: flex;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .navmenu li {
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .navmenu a {
+    font-size: 1rem;
+    color: #444;
+    padding: 10px 20px;
+    display: block;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .navmenu a:hover {
+    color: #FF5722;
+    background: rgba(255, 87, 34, 0.1);
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .mobile-nav-toggle.bi-x {
+    color: #FFC107;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .header .logo {
+    order: 1;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .header .btn-getstarted {
+    order: 2;
+    margin: 0 10px 0 0;
+    padding: 5px 15px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .header .navmenu {
+    order: 3;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header {
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header .logo h1 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header .logo img {
+    max-height: 28px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header .btn-getstarted {
+    padding: 4px 12px;
+    font-size: 11px;
+    margin-right: 5px;
+  }
+}
+

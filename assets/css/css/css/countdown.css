@@ -1,0 +1,33 @@
+.countdown-container {
+  display: flex;
+  gap: 15px;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 25px;
+  /*background-color: var(--surface-color);*/
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.countdown-box {
+  text-align: center;
+}
+
+.countdown-box .number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  line-height: 1.2;
+}
+
+.countdown-box .label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--default-color);
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
